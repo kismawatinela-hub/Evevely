@@ -1,0 +1,32 @@
+# Render Blueprint — Dashboard → New → Blueprint → connect GitHub repo
+#
+# Web Service (not Background Worker): Render needs $PORT + /health.
+# main.py serves /health while bot.py runs Telethon in the main thread.
+#
+# If your repo root is the parent folder (Soul/), set rootDir below.
+# If evelyn-soul IS the repo root, delete the rootDir line.
+services:
+  - type: web
+    name: evelyn-soul-bot
+    runtime: python
+    plan: proUltra
+    region: oregon
+    rootDir: evelyn-soul
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -u main.py
+    healthCheckPath: /health
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    disk:
+      name: evelyn-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 10
