@@ -1,0 +1,46 @@
+{
+  "global_proxy_fallback_enabled": true,
+  "checker_apis": [
+    {
+      "id": "api1",
+      "name": "Primary",
+      "url": "https://vps-fix-wobh.onrender.com/shopify?",
+      "max_workers": 400,
+      "enabled": true,
+      "role": "primary"
+    },
+    {
+      "id": "api2",
+      "name": "Secondary",
+      "url": "https://one50con.onrender.com/shopify?",
+      "max_workers": 400,
+      "enabled": true,
+      "role": "primary"
+    },
+    {
+      "id": "api3",
+      "name": "Tertiary",
+      "url": "https://con-curency.onrender.com/shopify?",
+      "max_workers": 400,
+      "enabled": true,
+      "role": "primary",
+      "https://con-curency.onrender.com/shopify?": 150
+    },
+    {
+      "id": "api4",
+      "name": "Quaternary",
+      "url": "https://two00-con.onrender.com/shopify?",
+      "max_workers": 400,
+      "enabled": true,
+      "role": "primary"
+    }
+  ],
+  "tier_workers": {
+    "free": 10,
+    "basic": 10,
+    "pro": 30,
+    "max": 40,
+    "ultra": 100,
+    "owner": 150
+  }
+}
