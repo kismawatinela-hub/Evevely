@@ -4,7 +4,7 @@
     {
       "id": "api1",
       "name": "Primary",
-      "url": "https://vps-fix-wobh.onrender.com/shopify?",
+      "url": "https://juicyworld.onrender.com/shopify?",
       "max_workers": 400,
       "enabled": true,
       "role": "primary"
@@ -12,24 +12,23 @@
     {
       "id": "api2",
       "name": "Secondary",
-      "url": "https://one50con.onrender.com/shopify?",
-      "max_workers": 400,
+      "url": "http://97.74.94.172:8000/shopify?",
+      "max_workers": 600,
       "enabled": true,
       "role": "primary"
     },
     {
       "id": "api3",
       "name": "Tertiary",
-      "url": "https://con-curency.onrender.com/shopify?",
+      "url": "https://six2s.onrender.com/shopify?",
       "max_workers": 400,
       "enabled": true,
       "role": "primary",
-      "https://con-curency.onrender.com/shopify?": 150
     },
     {
       "id": "api4",
       "name": "Quaternary",
-      "url": "https://two00-con.onrender.com/shopify?",
+      "url": "https://six2s-10.onrender.com/shopify?",
       "max_workers": 400,
       "enabled": true,
       "role": "primary"
